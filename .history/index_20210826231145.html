@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- ie 호환성보기 무시 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박정태 포트폴리오</title>
+
+    <!-- 설명 / 작성자 -->
+    <meta name="description" content="준비된 개발자 박정태의 포트폴리오 입니다.">
+    <meta name="author" content="박정태">
+
+    <!-- 아이콘 -->
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/0d232bdc2d.js" crossorigin="anonymous">
+    </script>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- css / js -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+
+<body>
+    <!-- Nav Bar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <i class="fas fa-user-circle"></i>
+            <a href="#">pjtae0328</a>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">Projects</li>
+            <li class="navbar__menu__item">Testimonials</li>
+            <li class="navbar__menu__item">Contact</li>
+        </ul>
+    </nav>
+
+    <!-- Home -->
+    <section class="home">
+        <img src="/imgs/profile.jpg" alt="profile photo" class="home__avatar">
+        <h1 class="home__title">Hello, <br>웹 개발자 박정태입니다.</h1>
+        <h2 class="home__discription">취미에서 이제는 직업으로, 프로그래밍을 공부하고 있습니다.</h2>
+        <button class="home__contact">Contact Me</button>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <h1>About me</h1>
+        <p>어필 문장 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam perferendis non officia provident quam facere deleniti velit dolorem veniam voluptatibus suscipit amet iste quisquam voluptas voluptatem ipsa nam, alias esse?</p>
+
+        <div class="about__majors">
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="major_title">Front-end</div>
+                <div class="major__description">
+                    HTML, CSS,
+                    <br>JavaScript, JQuery
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <div class="major_title">Back-end</div>
+                <div class="major__description">
+                    JSP&Servlet, Spring
+                </div>
+            </div>
+            <div class="major">
+                <div class="major__icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="major_title">RDBMS</div>
+                <div class="major__description">
+                    Oracle, MySQL
+                </div>
+            </div>
+        </div>
+
+        <div class="about__experience">
+            <div class="experience">
+                <img src="imgs/experience/kh.png" alt="KH정보 교육원">
+                <p class="experience__name">KH 정보교육원 웹콘텐츠 개발자 과정 수료</p>
+                <p class="experience__period">2021 May - 2021 Dec</p>
+            </div>
+            <div class="experience">
+                <img src="imgs/experience/hbad.png" alt="한방애드">
+                <p class="experience__name">PL Soft 리워드앱 개발 및 서비스(Android-JAVA, JSP&Servlet, MySQL)</p>
+                <p class="experience__period">2016 Sep - 2017 Jan</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto ipsam, ullam delectus facilis molestiae ratione, odio maxime nulla ipsa eligendi enim minima distinctio. Praesentium in animi soluta iure, error sit!
+            나의 강점 써보기 <i class="fas fa-star"></i>를 통해 제가 자신있는 정도를 표시해 보았습니다.
+        </p>
+
+        <div class="skillset">
+
+            <div class="skillset__top">
+                <div class="skill">
+                    <i class="fab fa-html5"></i>
+                    <h3 class="skill__title">HTML5 & CSS3</h3>
+                    <div class="skill__level">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>HTML과 CSS를 사용해 요구하는 디자인의 웹 스타일링을 할 수 있습니다.</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-js-square"></i>
+                    <h3 class="skill__title">Java Script</h3>
+                    <div class="skill__level">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>JS의 특징과 동작 방식을 이해하고 원하는 동적 웹을 구축 할 수 있습니다.</p>
+                </div>
+                <div class="skill">
+                    <i class="fab fa-java"></i>
+                    <h3 class="skill__title">JAVA</h3>
+                    <div class="skill__level">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>JSP&Servlet을 활용해 웹 서버를 구축할 수 있으며 Spring Framework를 이해하고 사용할 수 있습니다.
+                        <br>객체지향 패러다임을 이해하고 설계할 수 있으며 Spring Boot를 공부하고 개인 프로젝트를 진행했습니다.
+                    </p>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-database"></i>
+                    <h3 class="skill__title">Oracle</h3>
+                    <div class="skill__level">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>관계형 데이터베이스를 이해하고 설계할 수 있으며 적절한 쿼리문을 작성하여 사용할 수 있습니다.</p>
+                </div>
+            </div>
+
+            <div class="skillset__bottom">
+                <div class="tools">
+                    <h3 class="tools__title">Tools</h3>
+                    <ul class="tolls__list">
+                        <li><span>IntelliJ</span></li>
+                        <li><span>VisualStudio Code</span></li>
+                        <li><span>Eclipse</span></li>
+                        <li><span>VisualStudio 2019</span></li>
+                    </ul>
+                </div>
+                <div class="etc">
+                    <h3 class="etc__title">Etc</h3>
+                    <ul class="etc__list">
+                        <li><span>Git</span></li>
+                        <li><span>C#</span></li>
+                        <li><span>ActionScript 3.0</span></li>
+                        <li><span>AutoHotKey</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects">
+        <!-- 개인 Spring Boot -->
+        <div class="project">
+            <img src="https://via.placeholder.com/300" alt="projectIMG">
+            <h3 class="project__title">Title</h3>
+            <button class="project__View">View</button>
+            <a href="#" class="project__github" target="blank"><i class="fab fa-github"></i></a>
+        </div>
+        <!-- 학원 Spring -->
+        <div class="project">
+            <img src="https://via.placeholder.com/300" alt="projectIMG">
+            <h3 class="project__title">Title</h3>
+            <button class="project__View">View</button>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <!-- 학원 JSP&Servlet -->
+        <div class="project">
+            <img src="https://via.placeholder.com/300" alt="projectIMG">
+            <h3 class="project__title">Title</h3>
+            <button class="project__View">View</button>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <!-- 포트폴리오 페이지 -->
+        <div class="project">
+            <img src="https://via.placeholder.com/300" alt="projectIMG">
+            <h3 class="project__title">Title</h3>
+            <button class="project__View">View</button>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials"></section>
+
+    <!-- Contect -->
+    <section class="contect">
+    </section>
+
+
+</html>
