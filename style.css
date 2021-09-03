@@ -14,8 +14,8 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
-  --color-yellow: #fff7d1;
   --color-black: #000000;
+  --color-yellow: #fde56c;
 
   /* Font Size */
   --font-large: 48px;
@@ -144,6 +144,7 @@ p {
   display: flex;
   justify-content: center;
   flex-flow: wrap;
+  align-items: center;
 }
 
 .welcome,
@@ -155,7 +156,7 @@ p {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid var(--color-light-purple);
+  border: 2px solid var(--color-mint);
 }
 
 .welcome__description,
@@ -173,12 +174,16 @@ p {
   color: var(--color-dark-grey);
 }
 
-/* Section */
+/* Section Common */
 .section {
   padding: 50px;
   text-align: center;
-  max-width: 1200px;
   margin: 0 auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* About */
@@ -254,4 +259,99 @@ p {
 
 .experience__period {
   font-size: var(--font-micro);
+}
+
+/* skill */
+#skills {
+  background-color: var(--color-light-mint);
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+  box-shadow: 2px 2px 2px var(--color-light-white);
+
+  margin: 30px 0;
+  padding: 16px;
+}
+
+.skill:hover {
+  box-shadow: 2px 2px 2px var(--color-light-purple);
+}
+.skill:hover > .icons > i {
+  color: var(--color-purple);
+}
+
+.icons {
+  margin: auto;
+  width: 200px;
+  text-align: center;
+}
+
+.icons > i {
+  font-size: 50px;
+  color: var(--color-dark-white);
+}
+
+.fa-star {
+  margin-top: 3px;
+  color: var(--color-yellow);
+}
+
+.description-list {
+  width: 800px;
+  margin: auto;
+}
+
+.description-list__title {
+  color: var(--color-dark-grey);
+}
+
+.description-list__description {
+  color: var(--color-grey);
+  font-size: var(--font-small);
+}
+
+.skillset__title {
+  color: var(--color-light-grey);
+  font-size: var(--font-small);
+  text-align: left;
+}
+
+.skillset {
+  margin-top: 100px;
+}
+
+.skillset__bottom {
+  background-color: var(--color-light-white);
+
+  display: flex;
+}
+
+.tools {
+  background-color: var(--color-white);
+  flex-basis: 50%;
+  margin-right: 2px;
+  padding: 20px;
+}
+
+.etc {
+  background-color: var(--color-white);
+  flex-basis: 50%;
+  padding: 20px;
+}
+
+.tools__title,
+.etc__title {
+  margin: 20px;
+  font-weight: 700;
+}
+
+.tools__list,
+.etc__list {
+  font-size: var(--font-small);
 }
