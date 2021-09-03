@@ -261,7 +261,7 @@ p {
   font-size: var(--font-micro);
 }
 
-/* skill */
+/* skills */
 #skills {
   background-color: var(--color-light-mint);
 }
@@ -354,4 +354,53 @@ p {
 .tools__list,
 .etc__list {
   font-size: var(--font-small);
+}
+
+/* Responsive */
+@media screen and (max-width: 700px) {
+  :root {
+    /* Font Size */
+    --font-large: 36px;
+    --font-medium: 24px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
+
+  /* Home */
+  #home {
+    padding: 0;
+  }
+
+  .welcome {
+    margin-top: 0;
+  }
+
+  .about__majors {
+    justify-content: center;
+  }
+
+  .major {
+    margin: 20px 20px;
+  }
+
+  /* Navbar */
+  .logo__name {
+    display: none;
+  }
+
+  .navbar {
+    padding: 8px;
+  }
+
+  .navbar__menu {
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+
+  .navbar__menu__item {
+    padding: 4px 6px;
+    font-size: var(--font-small);
+    margin: 0;
+  }
 }
