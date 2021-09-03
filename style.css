@@ -67,6 +67,26 @@ hr {
   border: 1px solid var(--color-light-purple);
 }
 
+/* Section Common */
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  margin: 80px 0;
+}
+
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -105,6 +125,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-flow: wrap;
 
   background-color: var(--color-alpha-mint);
   color: var(--color-dark-grey);
@@ -119,6 +140,7 @@ p {
 
 .navbar__menu {
   display: flex;
+  flex-flow: wrap;
 }
 
 .navbar__menu__item {
@@ -172,26 +194,6 @@ p {
   border: 2px solid var(--color-dark-grey);
   border-radius: var(--size-border-radius);
   color: var(--color-dark-grey);
-}
-
-/* Section Common */
-.section {
-  padding: 50px;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.section__container {
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* About */
-.about__majors {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: wrap;
-  margin: 80px 0;
 }
 
 .major__icon {
@@ -384,6 +386,10 @@ p {
     margin: 20px 20px;
   }
 
+  .home__avatar {
+    margin: 20px 40px;
+  }
+
   /* Navbar */
   .logo__name {
     display: none;
@@ -402,5 +408,62 @@ p {
     padding: 4px 6px;
     font-size: var(--font-small);
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    /* Font Size */
+    --font-large: 32px;
+    --font-medium: 20px;
+  }
+
+  /* Section Common */
+  .section {
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /* About */
+  .about__majors {
+    flex-flow: wrap;
+    margin: 40px 0;
+  }
+
+  /* Navbar */
+
+  #navbar {
+    justify-content: center;
+  }
+
+  .navbar__menu {
+    display: none;
+  }
+
+  .logo__name {
+    display: inline;
+  }
+
+  /* About */
+
+  .about__experience {
+    margin-top: 40px;
+  }
+
+  .experience {
+    flex-flow: wrap;
+  }
+
+  /* Skills */
+  .skillset__bottom {
+    flex-flow: wrap;
+  }
+
+  .tools,
+  .etc {
+    margin: 0;
+    flex-basis: 100%;
+    padding: 20px;
   }
 }
