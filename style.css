@@ -6,6 +6,7 @@
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-mint: #caf7e3;
+  --color-alpha-mint: #caf7e3f0;
   --color-light-mint: #edffec;
   --color-purple: #e4bad4;
   --color-light-purple: #f6dfeb;
@@ -97,11 +98,15 @@ p {
 
 /* Navbar */
 #navbar {
+  position: sticky;
+  top: -1px;
+  left: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  background-color: var(--color-mint);
+  background-color: var(--color-alpha-mint);
   color: var(--color-dark-grey);
 
   padding: 16px;
@@ -135,6 +140,15 @@ p {
   background: url("imgs/home-background.png") center/cover no-repeat;
   padding: 40px;
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.welcome,
+.home__avatar {
+  margin: 50px 40px;
 }
 
 .home__avatar {
@@ -144,12 +158,12 @@ p {
   border: 2px solid var(--color-light-purple);
 }
 
-.home__discription,
-.home__title {
+.welcome__description,
+.welcome__title {
   color: var(--color-dark-grey);
 }
 
-.home__contact {
+.welcome__contact {
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin: 24px;
