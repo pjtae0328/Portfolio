@@ -131,6 +131,7 @@ p {
   color: var(--color-dark-grey);
 
   padding: 16px;
+  z-index: 1;
 }
 
 .navbar__logo {
@@ -358,6 +359,76 @@ p {
   font-size: var(--font-small);
 }
 
+/* Projects */
+.project-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+}
+
+.projects__title {
+  margin-bottom: 100px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 7px 7px 3px var(--color-light-white);
+  margin-bottom: 40px;
+}
+
+.project__View {
+  color: var(--color-white);
+  background-color: var(--color-purple);
+  width: 80px;
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-small);
+  margin-right: 20px;
+}
+
+.project__title {
+  margin: 15px 0;
+}
+
+.project__github {
+  color: var(--color-purple);
+  font-size: 30px;
+}
+
+.project__img {
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  max-height: 350px;
+  border-radius: var(--size-border-radius);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  top: -30px;
+  opacity: 0;
+  transition: all 300ms ease-in;
+}
+
+.project:hover .buttons {
+  top: 0;
+  opacity: 1;
+}
+
+/* Testimonials */
+#testimonials {
+  background-color: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+}
+
 /* Responsive */
 @media screen and (max-width: 700px) {
   :root {
@@ -408,6 +479,12 @@ p {
     padding: 4px 6px;
     font-size: var(--font-small);
     margin: 0;
+  }
+
+  /* Projects */
+  .buttons {
+    top: 0;
+    opacity: 1;
   }
 }
 
