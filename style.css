@@ -6,7 +6,6 @@
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
   --color-mint: #caf7e3;
-  --color-alpha-mint: #caf7e3f0;
   --color-light-mint: #edffec;
   --color-purple: #e4bad4;
   --color-light-purple: #f6dfeb;
@@ -79,14 +78,6 @@ hr {
   margin: auto;
 }
 
-/* About */
-.about__majors {
-  display: flex;
-  justify-content: space-between;
-  flex-flow: wrap;
-  margin: 80px 0;
-}
-
 /* Typography */
 h1 {
   font-size: var(--font-large);
@@ -127,8 +118,9 @@ p {
   align-items: center;
   flex-flow: wrap;
 
-  background-color: var(--color-alpha-mint);
+  background-color: var(--color-mint);
   color: var(--color-dark-grey);
+  opacity: 0.95;
 
   padding: 16px;
   z-index: 1;
@@ -197,12 +189,19 @@ p {
   color: var(--color-dark-grey);
 }
 
+/* About */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  margin: 80px 0;
+}
+
 .major__icon {
   width: 170px;
   height: 170px;
   font-size: 70px;
   line-height: 170px;
-  background-color: var(--color-light-mint);
   border-radius: 50%;
   color: var(--color-light-purple);
   border: 1px solid var(--color-light-purple);
@@ -412,7 +411,7 @@ p {
   position: relative;
   top: -30px;
   opacity: 0;
-  transition: all 300ms ease-in;
+  transition: all var(--animation-duration) ease-in;
 }
 
 .project:hover .buttons {
@@ -427,6 +426,37 @@ p {
 
 .testimonials {
   margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  margin: 40px;
+}
+
+.testimonial__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__name a {
+  color: var(--color-purple);
 }
 
 /* Responsive */
@@ -485,6 +515,25 @@ p {
   .buttons {
     top: 0;
     opacity: 1;
+  }
+
+  /* Testimonials */
+
+  .testimonials {
+    margin: auto 0;
+  }
+
+  .testimonial {
+    flex-flow: wrap;
+    justify-content: center;
+  }
+
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+  }
+  .testimonial__avatar:nth-child(even) {
+    margin: 0;
+    order: -1;
   }
 }
 
