@@ -87,7 +87,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -116,7 +116,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-flow: wrap;
+  flex-wrap: wrap;
 
   background-color: var(--color-mint);
   color: var(--color-dark-grey);
@@ -133,7 +133,7 @@ p {
 
 .navbar__menu {
   display: flex;
-  flex-flow: wrap;
+  flex-wrap: wrap;
 }
 
 .navbar__menu__item {
@@ -158,7 +158,7 @@ p {
 
   display: flex;
   justify-content: center;
-  flex-flow: wrap;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -193,7 +193,7 @@ p {
 .about__majors {
   display: flex;
   justify-content: space-between;
-  flex-flow: wrap;
+  flex-wrap: wrap;
   margin: 80px 0;
 }
 
@@ -271,7 +271,7 @@ p {
 .skill {
   display: flex;
   align-items: center;
-  flex-flow: wrap;
+  flex-wrap: wrap;
 
   background-color: var(--color-white);
   border-radius: var(--size-border-radius);
@@ -362,7 +362,7 @@ p {
 .project-list {
   display: flex;
   justify-content: space-evenly;
-  flex-flow: wrap;
+  flex-wrap: wrap;
 }
 
 .projects__title {
@@ -459,6 +459,34 @@ p {
   color: var(--color-purple);
 }
 
+/* Contact */
+#contact {
+  background-color: var(--color-mint);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+  color: var(--color-light-grey);
+}
+
+.contact__title {
+  margin: 32px 0;
+}
+
+.contact__email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-medium);
+}
+
+.contact__email > a {
+  margin-left: 10px;
+  font-size: var(--font-large);
+  color: var(--color-purple);
+}
+
 /* Responsive */
 @media screen and (max-width: 700px) {
   :root {
@@ -524,7 +552,7 @@ p {
   }
 
   .testimonial {
-    flex-flow: wrap;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -553,7 +581,7 @@ p {
 
   /* About */
   .about__majors {
-    flex-flow: wrap;
+    flex-wrap: wrap;
     margin: 40px 0;
   }
 
@@ -578,12 +606,12 @@ p {
   }
 
   .experience {
-    flex-flow: wrap;
+    flex-wrap: wrap;
   }
 
   /* Skills */
   .skillset__bottom {
-    flex-flow: wrap;
+    flex-wrap: wrap;
   }
 
   .tools,
