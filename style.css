@@ -35,6 +35,11 @@
   --animation-duration: 300ms;
 }
 
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 /* Universal tags */
 * {
   box-sizing: border-box;
