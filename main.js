@@ -38,3 +38,41 @@ document.addEventListener('scroll', () => {
         homeContainer.style.opacity = 1- window.scrollY / home.getBoundingClientRect().height;
     }
 });
+
+
+
+//Navbar button state
+const navbarButtons = document.querySelectorAll('.navbar__menu__item');
+let navbarActivedIndex = 0;
+
+//위치 판단 후 active 변경
+document.addEventListener('scroll', () => {
+    const maxHeight = document.body.getBoundingClientRect().height - window.innerHeight;
+    const scrollHeight = window.scrollY;
+    let totalHeight = document.querySelector('#home').getBoundingClientRect().height - window.innerHeight / 2;
+
+    //맨위, 아래 예외처리
+    if(scrollHeight < totalHeight) {
+        navbarButtons[navbarActivedIndex].classList.remove('active');
+        return;
+    }
+    if(scrollHeight >= maxHeight - 20) {
+        navbarButtons[navbarActivedIndex].classList.remove('active');
+        navbarButtons[navbarButtons.length - 1].classList.add('active');
+        navbarActivedIndex = navbarButtons.length - 1;
+        return;
+    }
+
+    for(let i = 0; i < navbarButtons.length; i++) {
+        const targetHeight = document.querySelector(navbarButtons[i].dataset.link)
+            .getBoundingClientRect().height;
+
+        totalHeight += targetHeight;
+        if(scrollHeight < totalHeight) {
+            navbarButtons[navbarActivedIndex].classList.remove('active');
+            navbarButtons[i].classList.add('active');
+            navbarActivedIndex = i;
+            return;
+        }
+    }
+});
