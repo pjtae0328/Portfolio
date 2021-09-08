@@ -1,6 +1,6 @@
 'use strict';
 
-//넷바 이동 이벤트
+//넷바 고정 이벤트
 const navbar = document.getElementById('navbar');
 document.addEventListener('scroll', () => {
     if(window.scrollY >= navbar.getBoundingClientRect().height) {
@@ -10,7 +10,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
-//넷바 버튼 스크롤 핸들링
+//넷바 버튼 네비게이션 스크롤 핸들링
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
     const target = event.target;
@@ -30,3 +30,11 @@ function scrollTo(link) {
 //Contact 버튼 핸들링
 const btnContact = document.querySelector('.welcome__contact');
 btnContact.addEventListener('click', () => scrollTo('#contact'));
+
+//home 스크롤 이벤트 - 투명도 조절
+const homeContainer = document.querySelector('.home__container');
+document.addEventListener('scroll', () => {
+    if(window.scrollY <= homeContainer.getBoundingClientRect().height) {
+        homeContainer.style.opacity = 1- window.scrollY / home.getBoundingClientRect().height;
+    }
+});
