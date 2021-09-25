@@ -31,14 +31,6 @@ function scrollTo(link) {
 const btnContact = document.querySelector('.welcome__contact');
 btnContact.addEventListener('click', () => scrollTo('#contact'));
 
-//home 스크롤 이벤트 - 투명도 조절
-const homeContainer = document.querySelector('.home__container');
-document.addEventListener('scroll', () => {
-    if(window.scrollY <= homeContainer.getBoundingClientRect().height) {
-        homeContainer.style.opacity = 1- window.scrollY / home.getBoundingClientRect().height;
-    }
-});
-
 
 
 //Navbar button state
@@ -56,7 +48,7 @@ document.addEventListener('scroll', () => {
         navbarButtons[navbarActivedIndex].classList.remove('active');
         return;
     }
-    if(scrollHeight >= maxHeight - 20) {
+    if(scrollHeight >= maxHeight - document.querySelector('#contact').getBoundingClientRect().height / 2) {
         navbarButtons[navbarActivedIndex].classList.remove('active');
         navbarButtons[navbarButtons.length - 1].classList.add('active');
         navbarActivedIndex = navbarButtons.length - 1;
