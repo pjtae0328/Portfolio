@@ -2,24 +2,6 @@
 
 :root {
   /* Color */
-  /* --color-white: #ffffff;
-  --color-light-white: #eeeeee;
-  --color-dark-white: #bdbdbd;
-
-  --color-mint: #caf7e3;
-  --color-light-mint: #edffec;
-  --color-purple: #e4bad4;
-  --color-light-purple: #f6dfeb;
-
-  --color-dark-grey: #4d4d4d;
-  --color-grey: #616161;
-  --color-light-grey: #7c7979;
-
-  --color-blue: #73aace;
-  --color-black: #000000;
-  --color-yellow: #fde56c; */
-
-  /* Color - pastel */
   --color-white: #ffffff;
   --color-light-white: #f2f2f2;
   --color-dark-white: #bdbdbd;
@@ -533,7 +515,7 @@ p {
 .contact__email > a {
   margin-left: 10px;
   font-size: var(--font-large);
-  color: var(--color-pink);
+  color: var(--color-light-white);
 }
 
 /* Responsive */
