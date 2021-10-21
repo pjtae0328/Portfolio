@@ -186,8 +186,6 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-color: var(--color-transparent-black);
 }
 
 .welcome,
@@ -218,6 +216,27 @@ p {
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
   color: var(--color-white);
+}
+
+/* header wave Test */
+.custom-shape-divider-bottom-1634804189 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1634804189 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 152px;
+}
+
+.custom-shape-divider-bottom-1634804189 .shape-fill {
+  fill: #f2f2f2;
 }
 
 /* About */
