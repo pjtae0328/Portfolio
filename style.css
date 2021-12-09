@@ -431,10 +431,10 @@ p {
 .project__view {
   color: var(--color-white);
   background-color: var(--color-pink);
-  width: 80px;
+  width: 100px;
+  margin-top: 16px;
   border-radius: var(--size-border-radius);
   font-size: var(--font-small);
-  margin-right: 20px;
 }
 
 .project__title {
@@ -444,11 +444,6 @@ p {
 
 .project__description {
   color: var(--color-grey);
-}
-
-.project__github {
-  color: var(--color-dark-grey);
-  font-size: 30px;
 }
 
 .project__img {
