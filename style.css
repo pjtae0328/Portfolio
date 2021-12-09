@@ -425,9 +425,10 @@ p {
   align-items: center;
   box-shadow: 2px 2px 2px var(--color-dark-white);
   margin-bottom: 40px;
+  background-color: var(--color-white);
 }
 
-.project__View {
+.project__view {
   color: var(--color-white);
   background-color: var(--color-pink);
   width: 80px;
@@ -438,6 +439,11 @@ p {
 
 .project__title {
   margin: 15px 0;
+  font-weight: var(--weight-semi-bold);
+}
+
+.project__description {
+  color: var(--color-grey);
 }
 
 .project__github {
@@ -446,11 +452,23 @@ p {
 }
 
 .project__img {
-  width: 100%;
-  height: 100%;
-  max-width: 350px;
-  max-height: 350px;
+  width: 350px;
+  height: 350px;
   border-radius: var(--size-border-radius);
+  background-color: var(--color-light-grey);
+  position: relative;
+}
+
+.project__img-mac {
+  position: absolute;
+  left: 8px;
+  top: 60px;
+}
+
+.project__img-phone {
+  position: absolute;
+  right: 8px;
+  bottom: 30px;
 }
 
 .buttons {
@@ -467,6 +485,52 @@ p {
 .project:hover .buttons {
   top: 0;
   opacity: 1;
+}
+
+/* project detail view */
+.project-background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background-color: #00000027;
+  z-index: 9998;
+}
+
+.project-wrap {
+  width: 90%;
+  min-width: 300px;
+  height: 90%;
+  background-color: var(--color-light-white);
+  border-radius: 4px;
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #888;
+}
+
+.fa-times-circle {
+  cursor: pointer;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  font-size: 32px;
+
+  color: var(--color-blue);
+}
+
+.project-detail {
+  width: 90%;
+  height: 90%;
+  transform: translate(5%, 5%);
+  border: none;
 }
 
 /* Testimonials */
@@ -503,6 +567,7 @@ p {
 }
 .testimonial__speech-bubble p {
   color: var(--color-dark-grey);
+  padding: 4px 16px;
 }
 
 .testimonial__name a {
