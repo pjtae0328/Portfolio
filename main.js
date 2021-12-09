@@ -68,3 +68,44 @@ document.addEventListener('scroll', () => {
         }
     }
 });
+
+
+//프로젝트 상세보기
+const tayoView = document.querySelector('.tayo-view');
+const sunnyTodayView = document.querySelector('.sunnytoday-view');
+
+const projectViewBackground = document.createElement('div');
+projectViewBackground.classList.add('project-background');
+
+const projectDetailWrap = document.createElement('div');
+projectDetailWrap.classList.add('project-wrap');
+projectViewBackground.appendChild(projectDetailWrap);
+
+const projectDetailExit = document.createElement('i');
+projectDetailExit.classList.add('fas');
+projectDetailExit.classList.add('fa-times-circle');
+projectDetailWrap.appendChild(projectDetailExit);
+
+projectDetailExit.addEventListener('click', ()=> {
+    document.body.removeChild(projectViewBackground);
+});
+
+const projectDetail = document.createElement('iframe');
+projectDetail.classList.add('project-detail');
+projectDetailWrap.appendChild(projectDetail);
+
+tayoView.addEventListener('click', () => showProjectDetail('tayo'));
+sunnyTodayView.addEventListener('click', () => showProjectDetail('sunnyToday'));
+
+function showProjectDetail(project) {
+    document.body.appendChild(projectViewBackground);
+
+    switch(project) {
+        case 'tayo':
+            projectDetail.src = 'https://pjtae0328.tistory.com/37';
+            break;
+        case 'sunnyToday':
+            projectDetail.src = 'https://pjtae0328.tistory.com/36';
+            break;
+    }
+}
