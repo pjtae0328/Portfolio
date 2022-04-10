@@ -73,6 +73,8 @@ document.addEventListener('scroll', () => {
 //프로젝트 상세보기
 const tayoView = document.querySelector('.tayo-view');
 const sunnyTodayView = document.querySelector('.sunnytoday-view');
+const kakaoView = document.querySelector('.kakao-view');
+const woosungView = document.querySelector('.ws-view');
 
 const projectViewBackground = document.createElement('div');
 projectViewBackground.classList.add('project-background');
@@ -96,6 +98,8 @@ projectDetailWrap.appendChild(projectDetail);
 
 tayoView.addEventListener('click', () => showProjectDetail('tayo'));
 sunnyTodayView.addEventListener('click', () => showProjectDetail('sunnyToday'));
+woosungView.addEventListener('click', () => alert('준비 중 입니다.'));
+kakaoView.addEventListener('click', () => alert('준비 중 입니다.'));
 
 function showProjectDetail(project) {
     document.body.appendChild(projectViewBackground);
